@@ -1,0 +1,16 @@
+.github/prompts/init-session.prompt.md:
+  original_sha: 44e08a0ddf49895b4ab13a4263f8f3b03e3f07118fd5ffcba7491ef42e977f32
+  template_version: 0
+  installed_date: 2026-09-04T13:34:43.299914+00:00
+  lang: []
+  agent: []
+  ref_count: 0
+  category: command
+AGENTS.md:
+  original_sha: 4fc9a51e19943ecc75d0a4ced39df0c0cb6022de1316cf19c3c2ef10417326be
+  template_version: 0
+  installed_date: 2026-09-04T13:34:43.299599+00:00
+  lang: []
+  agent: []
+  ref_count: 0
+  category: main

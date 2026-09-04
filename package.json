@@ -1,0 +1,72 @@
+{
+    "name": "vscode-swift-format",
+    "displayName": "Swift Format",
+    "description": "Format Swift files with Apple swift-format from Xcode. macOS only.",
+    "version": "0.1.0",
+    "publisher": "heikopanjas",
+    "license": "MIT",
+    "icon": "icon.png",
+    "author": "Heiko Panjas",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/heikopanjas/vscode-swift-format.git"
+    },
+    "bugs": {
+        "url": "https://github.com/heikopanjas/vscode-swift-format/issues"
+    },
+    "homepage": "https://github.com/heikopanjas/vscode-swift-format#readme",
+    "galleryBanner": {
+        "color": "#F05138",
+        "theme": "dark"
+    },
+    "engines": {
+        "vscode": "^1.85.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "keywords": [
+        "swift",
+        "format",
+        "swift-format",
+        "formatter"
+    ],
+    "activationEvents": [
+        "onLanguage:swift"
+    ],
+    "main": "./out/extension.js",
+    "contributes": {
+        "languages": [
+            {
+                "id": "swift",
+                "extensions": [
+                    ".swift"
+                ]
+            }
+        ],
+        "commands": [
+            {
+                "command": "swift-format.formatDocument",
+                "title": "Format Document with swift-format",
+                "category": "Swift Format"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run lint && npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "lint": "eslint src --ext ts",
+        "package": "vsce package",
+        "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.0",
+        "@types/vscode": "^1.85.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.0",
+        "@typescript-eslint/parser": "^7.0.0",
+        "@vscode/vsce": "^3.9.2",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.0"
+    }
+}
