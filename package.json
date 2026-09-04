@@ -2,7 +2,7 @@
     "name": "vscode-mauersegler",
     "displayName": "Mauersegler",
     "description": "Format Swift files with swift-format, on macOS, Windows, or Linux.",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "publisher": "heikopanjas",
     "license": "MIT",
     "icon": "icon.png",
