@@ -1,4 +1,6 @@
 import * as vscode from "vscode";
+import { resolveSwiftFormatCommand } from "./binary";
+import { ConfigurationGate } from "./config";
 import { FormatOffsets, runSwiftFormat } from "./runner";
 
 export class SwiftFormatProvider
@@ -6,7 +8,10 @@ export class SwiftFormatProvider
     vscode.DocumentFormattingEditProvider,
     vscode.DocumentRangeFormattingEditProvider
 {
-  constructor(private readonly output: vscode.OutputChannel) {}
+  constructor(
+    private readonly output: vscode.OutputChannel,
+    private readonly gate: ConfigurationGate
+  ) {}
 
   async provideDocumentFormattingEdits(
     document: vscode.TextDocument,
@@ -30,6 +35,11 @@ export class SwiftFormatProvider
     token: vscode.CancellationToken,
     range?: vscode.Range
   ): Promise<vscode.TextEdit[]> {
+    const gateResult = await this.gate.resolve(document);
+    if (!gateResult.allowed) {
+      return [];
+    }
+
     const source = document.getText();
 
     const offsets: FormatOffsets | undefined = range
@@ -45,18 +55,17 @@ export class SwiftFormatProvider
         }
       : undefined;
 
-    const workspaceFolder = vscode.workspace.getWorkspaceFolder(document.uri);
-    const cwd = workspaceFolder?.uri.fsPath;
-
     try {
-      const formatted = await runSwiftFormat(
+      const command = resolveSwiftFormatCommand(document.uri);
+      const formatted = await runSwiftFormat({
         source,
-        document.fileName,
-        cwd,
+        fileName: document.fileName,
+        configurationPath: gateResult.configurationPath,
+        command,
         token,
-        this.output,
-        offsets
-      );
+        output: this.output,
+        offsets,
+      });
 
       if (formatted === source) {
         return [];

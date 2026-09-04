@@ -1,7 +1,7 @@
 {
     "name": "vscode-swift-format",
     "displayName": "Swift Format",
-    "description": "Format Swift files with Apple swift-format from Xcode. macOS only.",
+    "description": "Format Swift files with swift-format, on macOS, Windows, or Linux.",
     "version": "0.1.0",
     "publisher": "heikopanjas",
     "license": "MIT",
@@ -50,7 +50,66 @@
                 "title": "Format Document with swift-format",
                 "category": "Swift Format"
             }
-        ]
+        ],
+        "configuration": {
+            "title": "Swift Format",
+            "properties": {
+                "swiftFormat.requireConfigurationFile": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource",
+                    "markdownDescription": "Only format Swift files when a `.swift-format` configuration file is found for the document. Without a configuration file, swift-format silently applies its built-in defaults and can reformat a project in a style nobody chose. Set to `false` to format anyway, using those defaults. Where the file is looked for is controlled by `#swiftFormat.configurationSearchScope#`."
+                },
+                "swiftFormat.configurationSearchScope": {
+                    "type": "string",
+                    "enum": [
+                        "workspaceFolder",
+                        "filesystem"
+                    ],
+                    "default": "workspaceFolder",
+                    "scope": "resource",
+                    "markdownDescription": "How far up the directory tree to search for a `.swift-format` file, starting from the directory of the document being formatted.",
+                    "enumDescriptions": [
+                        "Stop at the workspace folder root. A configuration outside the workspace is ignored.",
+                        "Keep walking to the filesystem root, matching swift-format's own lookup. A configuration in a parent directory or your home directory will be used."
+                    ]
+                },
+                "swiftFormat.offerToCreateConfigurationFile": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource",
+                    "markdownDescription": "Offer a **Create .swift-format** action when no configuration file is found, which writes swift-format's own default configuration to the workspace folder root. The file is only ever written when you choose that action. Set to `false` for a plain warning with no write action."
+                },
+                "swiftFormat.path": {
+                    "type": "string",
+                    "default": "",
+                    "scope": "resource",
+                    "markdownDescription": "The full path to the swift-format **executable itself**, including its filename — not the folder that contains it. For example `/usr/local/bin/swift-format` (macOS/Linux) or `C:\\swift\\bin\\swift-format.exe` (Windows), not `/usr/local/bin`. When set, this exact executable is used and `#swiftFormat.useXcrun#` is ignored. Leave empty to search PATH, or use `xcrun` on macOS — see `#swiftFormat.useXcrun#`."
+                },
+                "swiftFormat.useXcrun": {
+                    "type": "string",
+                    "enum": [
+                        "auto",
+                        "on",
+                        "off"
+                    ],
+                    "default": "auto",
+                    "scope": "resource",
+                    "markdownDescription": "Whether to run swift-format via `xcrun swift-format`, using Xcode's toolchain. Requires Xcode or the Xcode Command Line Tools. Ignored when `#swiftFormat.path#` is set.",
+                    "enumDescriptions": [
+                        "Use xcrun on macOS, and PATH everywhere else.",
+                        "Always use xcrun. Fails on a platform without Xcode.",
+                        "Never use xcrun; always search PATH instead."
+                    ]
+                },
+                "swiftFormat.additionalArguments": {
+                    "type": "string",
+                    "default": "",
+                    "scope": "resource",
+                    "markdownDescription": "Extra arguments passed to `swift-format format`, appended after the arguments this extension builds itself (for example `--strict` or `--ignore-unparsable-files`). Quote an argument containing spaces, e.g. `--configuration \"/path/with spaces/.swift-format\"`. Because these are appended last, a repeated `--configuration` here overrides the one this extension found — but `--offsets` does not work the same way: swift-format treats repeated `--offsets` as additional ranges to format, not a replacement, so an `--offsets` here adds to a selection format rather than replacing it."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run lint && npm run compile",
