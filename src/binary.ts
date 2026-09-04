@@ -44,7 +44,7 @@ export function resolveSwiftFormatCommand(
       baseArgs: ["swift-format"],
       additionalArgs,
       notFoundMessage:
-        "xcrun not found. Swift Format requires macOS with Xcode installed. " +
+        "xcrun not found. Mauersegler requires macOS with Xcode installed. " +
         "Set swiftFormat.useXcrun to \"off\" to search PATH instead, or set swiftFormat.path.",
     };
   }

@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Swift Format extension are documented in this file.
+All notable changes to the Mauersegler extension are documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -14,8 +14,8 @@ Initial public release.
 - Format `.swift` documents with Apple swift-format, via `xcrun`.
 - Format the current selection, using swift-format `--offsets` so the
   surrounding file stays intact and partial blocks format correctly.
-- `Swift Format: Format Document with swift-format` command.
-- A `Swift Format` output channel with the exact command line and any
+- `Mauersegler: Format Document with swift-format` command.
+- A `Mauersegler` output channel with the exact command line and any
   swift-format diagnostics.
 - Project `.swift-format` configuration files are honoured. The file is
   located by walking up from the directory of the document to the
@@ -41,6 +41,9 @@ Initial public release.
 
 ### Notes
 
+- Named Mauersegler (German for "swift", the bird) after the original
+  name, Swift Format, turned out to collide with another extension's
+  display name on the Marketplace.
 - The extension does not enable format-on-save or claim itself as the
   default Swift formatter. Opt in from your own settings; see the README.
 

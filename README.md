@@ -1,4 +1,4 @@
-# Swift Format for VS Code
+# Mauersegler for VS Code
 
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/heikopanjas.vscode-swift-format?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-swift-format)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/heikopanjas.vscode-swift-format)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-swift-format)
@@ -26,7 +26,7 @@ See the [swift-format repository](https://github.com/swiftlang/swift-format) for
 
 ## Install
 
-- **Marketplace:** search for "Swift Format" in the Extensions view, or run
+- **Marketplace:** search for "Mauersegler" in the Extensions view, or run
   `code --install-extension heikopanjas.vscode-swift-format`
 - **VSIX:** download the `.vsix` from
   [Releases](https://github.com/heikopanjas/vscode-swift-format/releases)
@@ -49,7 +49,7 @@ Not enabled by default. To enable, add to your `settings.json`:
 ### Format Manually
 
 - **Keyboard shortcut:** `Shift+Option+F` (macOS) / `Shift+Alt+F` (Windows/Linux)
-- **Command Palette:** `Cmd+Shift+P` → **Swift Format: Format Document with swift-format**
+- **Command Palette:** `Cmd+Shift+P` → **Mauersegler: Format Document with swift-format**
 - **Right-click** → **Format Document**
 
 ### Format a Selection
@@ -90,7 +90,7 @@ See the [swift-format documentation](https://github.com/swiftlang/swift-format/b
 
 ## Diagnostics
 
-The extension logs to the **Swift Format** output channel. Open it via **View → Output** and select **Swift Format** from the dropdown. When formatting is skipped because no configuration was found, the reason is always logged there, even if the warning notification was suppressed for the session.
+The extension logs to the **Mauersegler** output channel. Open it via **View → Output** and select **Mauersegler** from the dropdown. When formatting is skipped because no configuration was found, the reason is always logged there, even if the warning notification was suppressed for the session.
 
 ## Feedback
 

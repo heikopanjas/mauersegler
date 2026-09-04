@@ -7,7 +7,7 @@ const SWIFT_LANGUAGE_ID = "swift";
 let outputChannel: vscode.OutputChannel;
 
 export function activate(context: vscode.ExtensionContext): void {
-  outputChannel = vscode.window.createOutputChannel("Swift Format");
+  outputChannel = vscode.window.createOutputChannel("Mauersegler");
 
   const gate = new ConfigurationGate(outputChannel);
   const formatter = new SwiftFormatProvider(outputChannel, gate);
@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext): void {
     outputChannel
   );
 
-  outputChannel.appendLine("Swift Format extension activated.");
+  outputChannel.appendLine("Mauersegler extension activated.");
 }
 
 export function deactivate(): void {

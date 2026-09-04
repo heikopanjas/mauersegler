@@ -1,6 +1,6 @@
 {
     "name": "vscode-swift-format",
-    "displayName": "Swift Format",
+    "displayName": "Mauersegler",
     "description": "Format Swift files with swift-format, on macOS, Windows, or Linux.",
     "version": "0.1.0",
     "publisher": "heikopanjas",
@@ -48,11 +48,11 @@
             {
                 "command": "swift-format.formatDocument",
                 "title": "Format Document with swift-format",
-                "category": "Swift Format"
+                "category": "Mauersegler"
             }
         ],
         "configuration": {
-            "title": "Swift Format",
+            "title": "Mauersegler",
             "properties": {
                 "swiftFormat.requireConfigurationFile": {
                     "type": "boolean",
