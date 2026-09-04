@@ -1,7 +1,7 @@
 # Mauersegler for VS Code
 
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/heikopanjas.vscode-swift-format?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-swift-format)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/heikopanjas.vscode-swift-format)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-swift-format)
+[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/heikopanjas.vscode-mauersegler?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-mauersegler)
+[![Installs](https://img.shields.io/visual-studio-marketplace/i/heikopanjas.vscode-mauersegler)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-mauersegler)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/heikopanjas/mauersegler/blob/main/LICENSE)
 
 Format Swift source files using Apple's [swift-format](https://github.com/swiftlang/swift-format) tool. Works on macOS, Windows, and Linux.
@@ -29,7 +29,7 @@ See the [swift-format repository](https://github.com/swiftlang/swift-format) for
 Search for "Mauersegler" in the Extensions view, or run:
 
 ```sh
-code --install-extension heikopanjas.vscode-swift-format
+code --install-extension heikopanjas.vscode-mauersegler
 ```
 
 ## Usage
@@ -64,7 +64,7 @@ The extension does not claim itself as the default Swift formatter automatically
 
 ```json
 "[swift]": {
-  "editor.defaultFormatter": "heikopanjas.vscode-swift-format",
+  "editor.defaultFormatter": "heikopanjas.vscode-mauersegler",
   "editor.formatOnSave": true
 }
 ```

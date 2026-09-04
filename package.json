@@ -1,5 +1,5 @@
 {
-    "name": "vscode-swift-format",
+    "name": "vscode-mauersegler",
     "displayName": "Mauersegler",
     "description": "Format Swift files with swift-format, on macOS, Windows, or Linux.",
     "version": "0.1.1",
