@@ -9,15 +9,15 @@
     "author": "Heiko Panjas",
     "repository": {
         "type": "git",
-        "url": "https://github.com/heikopanjas/vscode-swift-format.git"
+        "url": "https://github.com/heikopanjas/mauersegler.git"
     },
     "bugs": {
-        "url": "https://github.com/heikopanjas/vscode-swift-format/issues"
+        "url": "https://github.com/heikopanjas/mauersegler/issues"
     },
-    "homepage": "https://github.com/heikopanjas/vscode-swift-format#readme",
+    "homepage": "https://github.com/heikopanjas/mauersegler#readme",
     "galleryBanner": {
-        "color": "#F05138",
-        "theme": "dark"
+        "color": "#6A98B6",
+        "theme": "light"
     },
     "engines": {
         "vscode": "^1.85.0"

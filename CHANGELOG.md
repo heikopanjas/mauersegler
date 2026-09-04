@@ -55,6 +55,3 @@ Initial public release.
   display name on the Marketplace.
 - The extension does not enable format-on-save or claim itself as the
   default Swift formatter. Opt in from your own settings; see the README.
-
-[0.1.1]: https://github.com/heikopanjas/vscode-swift-format/releases/tag/v0.1.1
-[0.1.0]: https://github.com/heikopanjas/vscode-swift-format/releases/tag/v0.1.0

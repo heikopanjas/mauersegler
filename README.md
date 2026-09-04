@@ -2,7 +2,7 @@
 
 [![Marketplace](https://img.shields.io/visual-studio-marketplace/v/heikopanjas.vscode-swift-format?label=marketplace)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-swift-format)
 [![Installs](https://img.shields.io/visual-studio-marketplace/i/heikopanjas.vscode-swift-format)](https://marketplace.visualstudio.com/items?itemName=heikopanjas.vscode-swift-format)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/heikopanjas/vscode-swift-format/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/heikopanjas/mauersegler/blob/main/LICENSE)
 
 Format Swift source files using Apple's [swift-format](https://github.com/swiftlang/swift-format) tool. Works on macOS, Windows, and Linux.
 
@@ -26,11 +26,11 @@ See the [swift-format repository](https://github.com/swiftlang/swift-format) for
 
 ## Install
 
-- **Marketplace:** search for "Mauersegler" in the Extensions view, or run
-  `code --install-extension heikopanjas.vscode-swift-format`
-- **VSIX:** download the `.vsix` from
-  [Releases](https://github.com/heikopanjas/vscode-swift-format/releases)
-  and run `code --install-extension <file>.vsix`
+Search for "Mauersegler" in the Extensions view, or run:
+
+```sh
+code --install-extension heikopanjas.vscode-swift-format
+```
 
 ## Usage
 
@@ -94,7 +94,7 @@ The extension logs to the **Mauersegler** output channel. Open it via **View →
 
 ## Feedback
 
-Bug reports and feature requests: [GitHub Issues](https://github.com/heikopanjas/vscode-swift-format/issues)
+Bug reports and feature requests: [GitHub Issues](https://github.com/heikopanjas/mauersegler/issues)
 
 ## License
 
